@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HT Li · 个人主页</title>
+  <meta name="description" content="HT Li 的个人网站 —— 记录思考、代码与创作。htli" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%236366f1'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>ht</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- 顶部导航 -->
+  <header class="site-header" id="site-header">
+    <nav class="nav container">
+      <a href="#hero" class="logo">
+        <span class="logo-mark">ht</span><span class="logo-suffix">li</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="菜单" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">关于</a></li>
+        <li><a href="#skills">技能</a></li>
+        <li><a href="#projects">项目</a></li>
+        <li><a href="#contact">联系</a></li>
+        <li>
+          <button class="theme-toggle" id="theme-toggle" aria-label="切换主题" title="切换深浅色主题">
+            <span class="theme-icon">🌙</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="container hero-inner">
+        <p class="hero-greeting">👋 你好，我是</p>
+        <h1 class="hero-name">HT&nbsp;Li</h1>
+        <p class="hero-tagline">
+          热爱<span class="accent">代码</span>与<span class="accent">创造</span>的开发者，
+          <br />把想法变成可用的产品。
+        </p>
+        <p class="hero-sub">
+          专注于 Web 开发 / 工具构建 / 开源 —— 持续学习，持续输出。
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">查看项目</a>
+          <a href="#contact" class="btn btn-ghost">联系我</a>
+        </div>
+        <a href="#about" class="scroll-hint" aria-label="向下滚动">
+          <span class="mouse"><span class="wheel"></span></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- 关于 -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section-title" data-reveal>关于我<span class="dot">.</span></h2>
+        <div class="about-grid">
+          <div class="about-text" data-reveal>
+            <p>
+              你好！我是 <strong>HT Li</strong>，一名全栈开发者。我喜欢把复杂的问题拆解成简洁优雅的解决方案，
+              也热衷于探索新技术、写博客和参与开源社区。
+            </p>
+            <p>
+              我相信「<em>好代码是会说话的</em>」，每一个项目都是一次与世界的对话。
+              工作之外，我喜欢跑步、摄影和折腾各种效率工具。
+            </p>
+            <ul class="about-list">
+              <li>📍 坐标：中国</li>
+              <li>💼 状态：开放合作 / 自由职业</li>
+              <li>🎯 兴趣：Web 开发 · 工具链 · AI 应用</li>
+            </ul>
+          </div>
+          <div class="about-card" data-reveal>
+            <div class="stat">
+              <span class="stat-num" data-count="5">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">年开发经验</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-count="30">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">完成项目</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-count="10">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">开源贡献</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 技能 -->
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <h2 class="section-title" data-reveal>技能栈<span class="dot">.</span></h2>
+        <div class="skills-grid">
+          <div class="skill-group" data-reveal>
+            <h3>前端</h3>
+            <div class="skill-items">
+              <span class="chip">HTML / CSS</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">TypeScript</span>
+              <span class="chip">React</span>
+              <span class="chip">Vue</span>
+              <span class="chip">Tailwind CSS</span>
+            </div>
+          </div>
+          <div class="skill-group" data-reveal>
+            <h3>后端</h3>
+            <div class="skill-items">
+              <span class="chip">Node.js</span>
+              <span class="chip">Python</span>
+              <span class="chip">Go</span>
+              <span class="chip">PostgreSQL</span>
+              <span class="chip">Redis</span>
+            </div>
+          </div>
+          <div class="skill-group" data-reveal>
+            <h3>工具 & 其他</h3>
+            <div class="skill-items">
+              <span class="chip">Git</span>
+              <span class="chip">Docker</span>
+              <span class="chip">Linux</span>
+              <span class="chip">Figma</span>
+              <span class="chip">CI/CD</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 项目 -->
+    <section class="section" id="projects">
+      <div class="container">
+        <h2 class="section-title" data-reveal>精选项目<span class="dot">.</span></h2>
+        <div class="projects-grid">
+          <article class="project-card" data-reveal>
+            <div class="project-icon">📝</div>
+            <h3>Skill 到底是什么？当你的工作方法开始被 AI 复用</h3>
+            <p>从一次小红书写作开始，理解 Skill 如何把个人经验、工作流程和判断标准，变成 AI 可以反复调用的方法。</p>
+            <div class="project-tags">
+              <span>Skill</span><span>AI</span><span>写作</span>
+            </div>
+            <a href="https://mp.weixin.qq.com/s/fwi5RgVCYM9g3mGInstZmQ" target="_blank" rel="noopener" class="project-link">阅读全文 →</a>
+          </article>
+          <article class="project-card" data-reveal>
+            <div class="project-icon">🚀</div>
+            <h3>项目一：效率工具箱</h3>
+            <p>一个集合常用开发工具的一站式 Web 应用，支持格式化、编码转换、时间戳等。</p>
+            <div class="project-tags">
+              <span>React</span><span>Vite</span><span>TypeScript</span>
+            </div>
+            <a href="#" class="project-link">了解更多 →</a>
+          </article>
+          <article class="project-card" data-reveal>
+            <div class="project-icon">📊</div>
+            <h3>项目二：数据可视化面板</h3>
+            <p>实时数据仪表盘，支持多数据源接入、自定义图表与导出报表。</p>
+            <div class="project-tags">
+              <span>Vue</span><span>ECharts</span><span>Node.js</span>
+            </div>
+            <a href="#" class="project-link">了解更多 →</a>
+          </article>
+          <article class="project-card" data-reveal>
+            <div class="project-icon">🤖</div>
+            <h3>项目三：AI 智能助手</h3>
+            <p>基于大模型构建的对话助手，支持知识库问答与自定义工作流。</p>
+            <div class="project-tags">
+              <span>Python</span><span>FastAPI</span><span>LLM</span>
+            </div>
+            <a href="#" class="project-link">了解更多 →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 联系 -->
+    <section class="section section-alt" id="contact">
+      <div class="container contact-inner">
+        <h2 class="section-title" data-reveal>联系我<span class="dot">.</span></h2>
+        <p class="contact-intro" data-reveal>
+          无论是有项目合作、技术交流，还是只是想打个招呼，都欢迎随时联系我。
+        </p>
+        <div class="contact-links" data-reveal>
+          <a href="mailto:hello@htli.dev" class="contact-item">
+            <span class="contact-icon">✉️</span>
+            <span>hello@htli.dev</span>
+          </a>
+          <a href="https://github.com/htli" target="_blank" rel="noopener" class="contact-item">
+            <span class="contact-icon">🐙</span>
+            <span>github.com/htli</span>
+          </a>
+          <a href="#" class="contact-item">
+            <span class="contact-icon">💬</span>
+            <span>微信：ht_li</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a href="#hero" class="logo logo-sm">
+        <span class="logo-mark">ht</span><span class="logo-suffix">li</span>
+      </a>
+      <p>© <span id="year"></span> HT Li · 用代码记录世界</p>
+      <p class="footer-domain">htli.dev</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
