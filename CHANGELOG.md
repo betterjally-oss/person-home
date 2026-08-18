@@ -23,19 +23,17 @@ js/main.js        # 主题切换 / 移动端导航 / 滚动动画 / 数字动画
 CHANGELOG.md      # 本文件
 ```
 
-## Git 仓库（两个 remote）
+## Git 仓库（2026-08-18 更新：原 person-home 已更名为 betterjally-oss.github.io）
 
-| remote | 地址 | 说明 |
-|---|---|---|
-| `origin` | https://github.com/betterjally-oss/person-home.git | 原开发仓库 |
-| `pages` | https://github.com/betterjally-oss/betterjally-oss.github.io.git | GitHub Pages 部署仓库（公开域名由此发布） |
+- **唯一 remote `origin`**：https://github.com/betterjally-oss/betterjally-oss.github.io.git
+- 部署与开发共用同一仓库，`main` 分支根目录即 GitHub Pages 内容
 
 ### 部署命令
 
 ```bash
 git add -A
 git commit -m "描述本次改动"
-git push pages main   # 推送后等 1–2 分钟 Pages 构建完成
+git push origin main   # 推送后等 1–2 分钟 Pages 构建完成
 ```
 
 - Pages 为用户名站点，从 `main` 分支**根目录**部署
@@ -92,14 +90,13 @@ git push pages main   # 推送后等 1–2 分钟 Pages 构建完成
   - 极矮视口（≤640px 高）自动隐藏图标（`display: none`），杜绝裁切/重叠
 
 ### 8. 部署到 GitHub Pages
-- 添加 `pages` remote，rebase 后推送（581540c..62be96b）
+- 原 person-home 仓库更名为 betterjally-oss.github.io，本地统一为单个 `origin` remote
 - 已验证公开域名：主页标题、首屏名字、about.html、最新 CSS 全部生效
 
 ---
 
 ## 待办 / 提醒
 
-- [ ] **`origin`（person-home 仓库）尚未同步本版本**，需要时执行 `git push origin main`
 - [ ] 数据卡数字是占位：5 年产品经验 / 30 完成项目 / 10 AI 应用案例 → 需替换真实数据
 - [ ] about.html 中的「2 年 / 30 个项目」也是占位 → 需替换
 - [ ] 精选项目区仍是模板占位（效率工具箱 / 数据可视化面板 / AI 智能助手）→ 待替换为真实项目
