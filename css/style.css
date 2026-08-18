@@ -107,11 +107,7 @@ img {
 }
 
 .logo-suffix {
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
+  color: var(--text);
 }
 
 .nav-links {
@@ -146,6 +142,20 @@ img {
 
 .nav-links a:hover::after {
   width: 100%;
+}
+
+.nav-links a.active {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.nav-links a.nav-ext {
+  color: var(--accent);
+  font-weight: 600;
 }
 
 .theme-toggle {
@@ -192,6 +202,7 @@ img {
 /* ============ Hero ============ */
 .hero {
   min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   position: relative;
@@ -303,10 +314,23 @@ img {
   color: var(--accent);
 }
 
+/* 了解更多按钮：默认即强调色，悬停填充渐变 */
+.btn-ghost-accent {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.btn-ghost-accent:hover {
+  border-color: transparent;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.35);
+}
+
 /* 滚动提示 */
 .scroll-hint {
   position: absolute;
-  bottom: 40px;
+  bottom: 54px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -375,6 +399,53 @@ img {
   font-style: normal;
 }
 
+/* —— 关于我 · 折叠阅读 —— */
+.about-body {
+  position: relative;
+  max-height: 80em;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.about-body.collapsed {
+  max-height: 13em;
+}
+
+.about-body.collapsed::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4.5em;
+  background: linear-gradient(to bottom, transparent, var(--bg));
+  pointer-events: none;
+}
+
+.about-more {
+  margin-top: 14px;
+  padding: 6px 2px;
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.about-more:hover {
+  opacity: 0.75;
+}
+
+.about-more[hidden] {
+  display: none;
+}
+
+.about-text .btn {
+  margin-top: 20px;
+}
+
 .about-list {
   list-style: none;
   margin-top: 24px;
@@ -430,7 +501,7 @@ img {
 /* ============ 技能 ============ */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
 }
 
@@ -469,6 +540,102 @@ img {
   border-color: var(--accent);
   color: var(--accent);
   transform: translateY(-2px);
+}
+
+/* ============ 关于页 ============ */
+.about-article {
+  max-width: 760px;
+}
+
+.about-article h3 {
+  font-size: 1.3rem;
+  margin: 48px 0 18px;
+  color: var(--text);
+}
+
+.about-article h3::before {
+  content: "# ";
+  color: var(--accent);
+}
+
+.about-article p {
+  color: var(--text-muted);
+  line-height: 1.95;
+  margin-bottom: 16px;
+  font-size: 1.02rem;
+}
+
+.about-article strong {
+  color: var(--text);
+}
+
+.article-lead {
+  font-size: 1.15rem !important;
+  color: var(--text) !important;
+}
+
+.stat-line {
+  font-size: 1.25rem !important;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--accent) !important;
+  margin: 8px 0 28px !important;
+}
+
+.work-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.work-list li {
+  padding: 14px 18px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--text);
+  line-height: 1.7;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.work-list li:hover {
+  border-color: var(--accent);
+  transform: translateX(4px);
+}
+
+.work-list strong {
+  color: var(--accent);
+  margin-right: 10px;
+}
+
+.view-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.view-list li {
+  padding-left: 20px;
+  position: relative;
+}
+
+.view-list li::before {
+  content: "◆";
+  position: absolute;
+  left: 0;
+  top: 1px;
+  color: var(--accent);
+  font-size: 0.7rem;
+}
+
+.about-cta {
+  margin-top: 40px;
 }
 
 /* ============ 项目 ============ */
@@ -619,6 +786,10 @@ img {
 
 /* ============ 响应式 ============ */
 @media (max-width: 860px) {
+  .hero {
+    padding: 96px 0 64px;
+  }
+
   .about-grid {
     grid-template-columns: 1fr;
   }
@@ -676,5 +847,12 @@ img {
   .footer-inner {
     justify-content: center;
     text-align: center;
+  }
+}
+
+/* 极矮视口（小笔记本窗口 / 手机横屏等）：首屏内容可能撑满，隐藏下滑提示，避免被裁切或与按钮重叠 */
+@media (max-height: 640px) {
+  .scroll-hint {
+    display: none;
   }
 }

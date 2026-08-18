@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HT Li · 个人主页</title>
-  <meta name="description" content="HT Li 的个人网站 —— 记录思考、代码与创作。htli" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%236366f1'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>ht</text></svg>" />
+  <title>刘佳磊 · 个人主页</title>
+  <meta name="description" content="刘佳磊的个人网站 —— 记录思考、AI 产品与创作。" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%236366f1'/><text x='50' y='68' font-size='44' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>JL</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -16,16 +16,18 @@
   <header class="site-header" id="site-header">
     <nav class="nav container">
       <a href="#hero" class="logo">
-        <span class="logo-mark">ht</span><span class="logo-suffix">li</span>
+        <span class="logo-mark">刘</span><span class="logo-suffix">佳磊</span>
       </a>
       <button class="nav-toggle" id="nav-toggle" aria-label="菜单" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="nav-links">
-        <li><a href="#about">关于</a></li>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="about.html">关于</a></li>
         <li><a href="#skills">技能</a></li>
         <li><a href="#projects">项目</a></li>
         <li><a href="#contact">联系</a></li>
+        <li><a href="https://github.com/betterjally-oss" target="_blank" rel="noopener" class="nav-ext" title="GitHub 个人主页">GitHub ↗</a></li>
         <li>
           <button class="theme-toggle" id="theme-toggle" aria-label="切换主题" title="切换深浅色主题">
             <span class="theme-icon">🌙</span>
@@ -40,22 +42,22 @@
     <section class="hero" id="hero">
       <div class="container hero-inner">
         <p class="hero-greeting">👋 你好，我是</p>
-        <h1 class="hero-name">HT&nbsp;Li</h1>
+        <h1 class="hero-name">刘佳磊</h1>
         <p class="hero-tagline">
-          热爱<span class="accent">代码</span>与<span class="accent">创造</span>的开发者，
-          <br />把想法变成可用的产品。
+          专注<span class="accent">AI 产品</span>与<span class="accent">智能体</span>的产品经理，
+          <br />把大模型的能力，变成真实可用的产品。
         </p>
         <p class="hero-sub">
-          专注于 Web 开发 / 工具构建 / 开源 —— 持续学习，持续输出。
+          从用户洞察到 Agent 工作流落地 —— 关注 AI 应用 / 对话式交互 / 效率工具，持续学习，持续输出。
         </p>
         <div class="hero-actions">
           <a href="#projects" class="btn btn-primary">查看项目</a>
           <a href="#contact" class="btn btn-ghost">联系我</a>
         </div>
-        <a href="#about" class="scroll-hint" aria-label="向下滚动">
-          <span class="mouse"><span class="wheel"></span></span>
-        </a>
       </div>
+      <a href="#about" class="scroll-hint" aria-label="向下滚动">
+        <span class="mouse"><span class="wheel"></span></span>
+      </a>
     </section>
 
     <!-- 关于 -->
@@ -64,24 +66,28 @@
         <h2 class="section-title" data-reveal>关于我<span class="dot">.</span></h2>
         <div class="about-grid">
           <div class="about-text" data-reveal>
-            <p>
-              你好！我是 <strong>HT Li</strong>，一名全栈开发者。我喜欢把复杂的问题拆解成简洁优雅的解决方案，
-              也热衷于探索新技术、写博客和参与开源社区。
-            </p>
-            <p>
-              我相信「<em>好代码是会说话的</em>」，每一个项目都是一次与世界的对话。
-              工作之外，我喜欢跑步、摄影和折腾各种效率工具。
-            </p>
-            <ul class="about-list">
-              <li>📍 坐标：中国</li>
-              <li>💼 状态：开放合作 / 自由职业</li>
-              <li>🎯 兴趣：Web 开发 · 工具链 · AI 应用</li>
-            </ul>
+            <div class="about-body" id="about-body">
+              <p>
+                你好！我是 <strong>刘佳磊</strong>，一名 AI 产品经理。我相信 AI 不是炫技，而是生产力——
+                我的工作就是把它的能力变成普通人能真正用起来的产品：定义需求、设计交互、搭建 Agent 工作流、验证价值闭环。
+              </p>
+              <p>
+                我擅长把模糊的想法拆解成清晰的需求，再让大模型能力落地成可交付的解决方案。
+                我相信「<em>好的 AI 产品是会说话的</em>」，每一个产品都是一次与世界的对话。
+                工作之外，我喜欢跑步、摄影和折腾各种效率工具。
+              </p>
+              <ul class="about-list">
+                <li>📍 坐标：中国</li>
+                <li>🎯 兴趣：AI 应用 · Agent · 产品设计</li>
+              </ul>
+            </div>
+            <button class="about-more" id="about-more" type="button" hidden>阅读全文 ↓</button>
+            <a href="about.html" class="btn btn-ghost btn-ghost-accent">了解更多 →</a>
           </div>
           <div class="about-card" data-reveal>
             <div class="stat">
               <span class="stat-num" data-count="5">0</span><span class="stat-plus">+</span>
-              <span class="stat-label">年开发经验</span>
+              <span class="stat-label">年产品经验</span>
             </div>
             <div class="stat">
               <span class="stat-num" data-count="30">0</span><span class="stat-plus">+</span>
@@ -89,7 +95,7 @@
             </div>
             <div class="stat">
               <span class="stat-num" data-count="10">0</span><span class="stat-plus">+</span>
-              <span class="stat-label">开源贡献</span>
+              <span class="stat-label">AI 应用案例</span>
             </div>
           </div>
         </div>
@@ -102,34 +108,43 @@
         <h2 class="section-title" data-reveal>技能栈<span class="dot">.</span></h2>
         <div class="skills-grid">
           <div class="skill-group" data-reveal>
-            <h3>前端</h3>
+            <h3>产品设计</h3>
             <div class="skill-items">
-              <span class="chip">HTML / CSS</span>
-              <span class="chip">JavaScript</span>
-              <span class="chip">TypeScript</span>
-              <span class="chip">React</span>
-              <span class="chip">Vue</span>
-              <span class="chip">Tailwind CSS</span>
+              <span class="chip">需求分析</span>
+              <span class="chip">用户调研</span>
+              <span class="chip">原型设计</span>
+              <span class="chip">PRD 撰写</span>
+              <span class="chip">交互流程</span>
             </div>
           </div>
           <div class="skill-group" data-reveal>
-            <h3>后端</h3>
+            <h3>AI 能力</h3>
             <div class="skill-items">
-              <span class="chip">Node.js</span>
-              <span class="chip">Python</span>
-              <span class="chip">Go</span>
-              <span class="chip">PostgreSQL</span>
-              <span class="chip">Redis</span>
+              <span class="chip">Prompt 工程</span>
+              <span class="chip">RAG</span>
+              <span class="chip">Agent 工作流</span>
+              <span class="chip">模型评估</span>
+              <span class="chip">AI 应用落地</span>
             </div>
           </div>
           <div class="skill-group" data-reveal>
-            <h3>工具 & 其他</h3>
+            <h3>数据分析</h3>
             <div class="skill-items">
-              <span class="chip">Git</span>
-              <span class="chip">Docker</span>
-              <span class="chip">Linux</span>
+              <span class="chip">SQL</span>
+              <span class="chip">埋点分析</span>
+              <span class="chip">A/B 测试</span>
+              <span class="chip">指标拆解</span>
+              <span class="chip">数据看板</span>
+            </div>
+          </div>
+          <div class="skill-group" data-reveal>
+            <h3>协作与工具</h3>
+            <div class="skill-items">
               <span class="chip">Figma</span>
-              <span class="chip">CI/CD</span>
+              <span class="chip">Notion</span>
+              <span class="chip">Jira</span>
+              <span class="chip">XMind</span>
+              <span class="chip">Git</span>
             </div>
           </div>
         </div>
@@ -189,17 +204,17 @@
           无论是有项目合作、技术交流，还是只是想打个招呼，都欢迎随时联系我。
         </p>
         <div class="contact-links" data-reveal>
-          <a href="mailto:hello@htli.dev" class="contact-item">
+          <a href="mailto:betterjally@gmail.com" class="contact-item">
             <span class="contact-icon">✉️</span>
-            <span>hello@htli.dev</span>
+            <span>betterjally@gmail.com</span>
           </a>
-          <a href="https://github.com/htli" target="_blank" rel="noopener" class="contact-item">
+          <a href="https://github.com/betterjally-oss" target="_blank" rel="noopener" class="contact-item">
             <span class="contact-icon">🐙</span>
-            <span>github.com/htli</span>
+            <span>github.com/betterjally-oss</span>
           </a>
           <a href="#" class="contact-item">
             <span class="contact-icon">💬</span>
-            <span>微信：ht_li</span>
+            <span>微信：317874273</span>
           </a>
         </div>
       </div>
@@ -209,10 +224,10 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <a href="#hero" class="logo logo-sm">
-        <span class="logo-mark">ht</span><span class="logo-suffix">li</span>
+        <span class="logo-mark">刘</span><span class="logo-suffix">佳磊</span>
       </a>
-      <p>© <span id="year"></span> HT Li · 用代码记录世界</p>
-      <p class="footer-domain">htli.dev</p>
+      <p>© <span id="year"></span> 刘佳磊 · 用 AI 产品改变世界</p>
+      <p class="footer-domain">liujialei.dev</p>
     </div>
   </footer>
 

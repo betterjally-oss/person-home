@@ -3,7 +3,7 @@ const themeToggle = document.getElementById('theme-toggle');
 const themeIcon = themeToggle.querySelector('.theme-icon');
 
 function getPreferredTheme() {
-  const saved = localStorage.getItem('htli-theme');
+  const saved = localStorage.getItem('liujialei-theme');
   if (saved) return saved;
   return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 }
@@ -11,7 +11,7 @@ function getPreferredTheme() {
 function applyTheme(theme) {
   document.documentElement.setAttribute('data-theme', theme);
   themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
-  localStorage.setItem('htli-theme', theme);
+  localStorage.setItem('liujialei-theme', theme);
 }
 
 applyTheme(getPreferredTheme());
@@ -87,6 +87,23 @@ const counterObserver = new IntersectionObserver(
 );
 
 document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(el));
+
+// ============ 关于我 · 折叠阅读 ============
+const aboutBody = document.getElementById('about-body');
+const aboutMore = document.getElementById('about-more');
+
+if (aboutBody && aboutMore) {
+  // 内容足够长时才显示“阅读全文”按钮
+  if (aboutBody.scrollHeight > 320) {
+    aboutMore.hidden = false;
+    aboutBody.classList.add('collapsed');
+  }
+
+  aboutMore.addEventListener('click', () => {
+    const isCollapsed = aboutBody.classList.toggle('collapsed');
+    aboutMore.textContent = isCollapsed ? '阅读全文 ↓' : '收起 ↑';
+  });
+}
 
 // ============ 页脚年份 ============
 document.getElementById('year').textContent = new Date().getFullYear();
