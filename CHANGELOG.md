@@ -93,6 +93,11 @@ git push origin main   # 推送后等 1–2 分钟 Pages 构建完成
 - 原 person-home 仓库更名为 betterjally-oss.github.io，本地统一为单个 `origin` remote
 - 已验证公开域名：主页标题、首屏名字、about.html、最新 CSS 全部生效
 
+### 9. 移除技能模块（主页 #skills）
+- 删除主页「技能栈」整个区块（产品设计 / AI 能力 / 数据分析 / 协作与工具）
+- 导航同步调整：首页与关于页均移除「技能」入口，现为：首页 / 关于 / 项目 / 联系 / GitHub ↗
+- 技能相关 CSS（.skills-grid 等）保留未删，如需恢复可重新加回 HTML 区块即可
+
 ---
 
 ## 待办 / 提醒
